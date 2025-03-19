@@ -17,11 +17,17 @@ public class ExampleBleInteractor : MonoBehaviour
 
     private bool _isScanning = false;
 
+    private void Start()
+    {
+        ScanForDevices();
+    }
+
     public void ScanForDevices()
     {
         if (!_isScanning)
         {
             _isScanning = true;
+            print("commence à scanner");
             BleManager.Instance.QueueCommand(new DiscoverDevices(OnDeviceFound, _scanTime * 1000));
         }
     }
@@ -36,11 +42,13 @@ public class ExampleBleInteractor : MonoBehaviour
                 _scanTimer = 0f;
                 _isScanning = false;
             }
+            //print("est en train de scanner");
         }
     }
 
     private void OnDeviceFound(string name, string device)
     {
+        print("found");
         DeviceRowView button = Instantiate(_deviceButton, _deviceList);
         button.Show(name, device);
     }

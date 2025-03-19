@@ -9,7 +9,7 @@ public class SpinCube : MonoBehaviour
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
-        
+        print("passe ici");
     }
 
     // Update is called once per frame
@@ -18,5 +18,4 @@ public class SpinCube : MonoBehaviour
         transform.Rotate(RotateAmount);
     }
 
-    private void OnDeviceFound(string device, string name) => Debug.Log($"Found device {device} with name {name}")
 }
