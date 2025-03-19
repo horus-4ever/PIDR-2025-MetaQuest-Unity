@@ -1,0 +1,3 @@
+[submodule "Unity-Android-Bluetooth-Low-Energy"]
+	path = Unity-Android-Bluetooth-Low-Energy
+	url = https://github.com/Velorexe/Unity-Android-Bluetooth-Low-Energy.git
