@@ -239,15 +239,14 @@
       "url": "https://packages.unity.com"
     },
     "com.velorexe.androidbluetoothlowenergy": {
-      "version": "https://github.com/Velorexe/Unity-Android-Bluetooth-Low-Energy.git",
+      "version": "file:/home/luke/Documents/TN/2A/metaquest/PIDR-2025-MetaQuest/PIDR-2025-MetaQuest-Unity/Unity-Android-Bluetooth-Low-Energy",
       "depth": 0,
-      "source": "git",
+      "source": "local",
       "dependencies": {
         "com.unity.mobile.android-logcat": "1.2.3",
         "com.unity.ugui": "1.0.0",
         "com.unity.modules.androidjni": "^1.0.0"
-      },
-      "hash": "07ca014aa67e1cb2bf34806d46bf2cf9feb1f194"
+      }
     },
     "com.unity.modules.accessibility": {
       "version": "1.0.0",

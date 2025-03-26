@@ -27,8 +27,9 @@ public class ExampleBleInteractor : MonoBehaviour
         if (!_isScanning)
         {
             _isScanning = true;
+            var discoverDevice = new DiscoverDevices(OnDeviceFound, _scanTime * 1000); // s'arete de scanner au bout de 10s
             print("commence à scanner");
-            BleManager.Instance.QueueCommand(new DiscoverDevices(OnDeviceFound, _scanTime * 1000));
+            BleManager.Instance.QueueCommand(discoverDevice);
         }
     }
 
@@ -36,13 +37,13 @@ public class ExampleBleInteractor : MonoBehaviour
     {
         if(_isScanning)
         {
-            _scanTimer += Time.deltaTime;
+            _scanTimer += Time.deltaTime; // fait un scan environ toutes les 5ms
             if(_scanTimer > _scanTime)
             {
                 _scanTimer = 0f;
                 _isScanning = false;
             }
-            //print("est en train de scanner");
+            //print("scanTimer = "+ _scanTimer+ ", scantime = "+ _scanTime );
         }
     }
 
